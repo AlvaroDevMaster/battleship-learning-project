@@ -27,12 +27,13 @@ function addShip($type, $positions){
         $column = rand(0, 10);
         return [$row, $column];
     }
-
+    $range = 0;
     if($orientation === 2 || $orientation === 4){
-
+        $range = $orientation === 2? $range - $shipLength : $range + $shipLength;
+        
     }
     else if($orientation === 1 || $orientation === 3){
-
+        $range = $orientation === 1? $range - $shipLength : $range + $shipLength;
     }
     return [];
 }
