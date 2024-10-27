@@ -90,7 +90,7 @@ function getValidPosition($shipLength, $orientation) {
 //Buscar si hay solapacion en la colocacion de barcos
 function checkOverlap($shipPositions, $positions, $type) {
     foreach ($shipPositions as $position) {
-        if (array_search($position, $positions["$type"], true) !== NULL){
+        if (array_search($position, $positions["$type"], true) !== false){
             return true;
         }
     }
